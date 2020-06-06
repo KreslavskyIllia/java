@@ -1,0 +1,86 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class CalculatorFrame extends JFrame {
+    public CalculatorFrame(String title) {
+        setTitle(title);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        setBounds(100, 100, 325, 475);
+        setVisible(true);
+        setResizable(false);
+        setLayout(null);
+
+        JTextField jtf = new JTextField();
+        jtf.setBounds(5, 5, 300, 75);
+        add(jtf);
+
+        JButton b0 = new JButton("0");
+        b0.setBounds(80, 305, 74, 74);
+        b0.addActionListener(new ButtonListener(jtf));
+        add(b0);
+        JButton b1 = new JButton("1");
+        b1.setBounds(5, 80, 74, 74);
+        b1.addActionListener(new ButtonListener(jtf));
+        add(b1);
+        JButton b2 = new JButton("2");
+        b2.setBounds(80, 80, 74, 74);
+        b2.addActionListener(new ButtonListener(jtf));
+        add(b2);
+        JButton b3 = new JButton("3");
+        b3.setBounds(155, 80, 74, 74);
+        b3.addActionListener(new ButtonListener(jtf));
+        add(b3);
+        JButton b4 = new JButton("4");
+        b4.setBounds(5, 155, 74, 74);
+        b4.addActionListener(new ButtonListener(jtf));
+        add(b4);
+        JButton b5 = new JButton("5");
+        b5.setBounds(80, 155, 74, 74);
+        b5.addActionListener(new ButtonListener(jtf));
+        add(b5);
+        JButton b6 = new JButton("6");
+        b6.setBounds(155, 155, 74, 74);
+        b6.addActionListener(new ButtonListener(jtf));
+        add(b6);
+        JButton b7 = new JButton("7");
+        b7.setBounds(5, 230, 74, 74);
+        b7.addActionListener(new ButtonListener(jtf));
+        add(b7);
+        JButton b8 = new JButton("8");
+        b8.setBounds(80, 230, 74, 74);
+        b8.addActionListener(new ButtonListener(jtf));
+        add(b8);
+        JButton b9 = new JButton("9");
+        b9.setBounds(155, 230, 74, 74);
+        b9.addActionListener(new ButtonListener(jtf));
+        add(b9);
+        JButton bDot = new JButton(",");
+        bDot.setBounds(5, 305, 74, 74);
+        bDot.addActionListener(new ButtonListener(jtf));
+        add(bDot);
+        JButton bPlus = new JButton("+");
+        bPlus.setBounds(230, 80, 74, 74);
+        bPlus.addActionListener(new ButtonListener(jtf));
+        add(bPlus);
+        JButton bMinus = new JButton("-");
+        bMinus.setBounds(230, 155, 74, 74);
+        bMinus.addActionListener(new ButtonListener(jtf));
+        add(bMinus);
+        JButton bMult = new JButton("*");
+        bMult.setBounds(230, 230, 74, 74);
+        bMult.addActionListener(new ButtonListener(jtf));
+        add(bMult);
+        JButton bDiv = new JButton("/");
+        bDiv.setBounds(230, 305, 74, 74);
+        bDiv.addActionListener(new ButtonListener(jtf));
+        add(bDiv);
+        JButton bDel = new JButton("<");
+        bDel.setBounds(155, 305, 74, 74);
+        add(bDel);
+        JButton bRes = new JButton("=");
+        bRes.setBounds(5,380, 300, 50);
+        bRes.setBackground(new Color(87655));
+        bRes.addActionListener(new ButtonListener(jtf));
+        add(bRes);
+    }
+}
